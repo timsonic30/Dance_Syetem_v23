@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import "./competition.css";
-
+import { useRouter } from "next/navigation";
 export default function Competition() {
+  const router = useRouter();
   // Slides data for the slideshow
   const slides = [
     {
@@ -24,7 +25,9 @@ export default function Competition() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+    );
   };
 
   // State management for form
@@ -109,15 +112,19 @@ export default function Competition() {
       submissionData.append("transactionSlip", formData.transactionSlip); // Add the file
 
       // Make POST request to the backend
-      const response = await fetch("http://localhost:3030/competitionApply/submissions", {
-        method: "POST",
-        body: submissionData, // Send FormData
-      });
+      const response = await fetch(
+        "http://localhost:3030/competitionApply/submissions",
+        {
+          method: "POST",
+          body: submissionData, // Send FormData
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("Submission successful!");
         alert("Your submission was successful!"); // Display success alert
         handleReset(); // Reset form fields after success
+        router.push("/");
       } else {
         const errorResponse = await response.json();
         setSubmitStatus(`Submission failed: ${errorResponse.message}`);
@@ -133,7 +140,10 @@ export default function Competition() {
       {/* Slideshow */}
       <div className="CA-slideshow-container" id="CA-slideshow-container">
         <div className="CA-slide CA-fade" id="CA-slide">
-          <img src={slides[currentIndex].image} alt={`Slide ${currentIndex + 1}`} />
+          <img
+            src={slides[currentIndex].image}
+            alt={`Slide ${currentIndex + 1}`}
+          />
           {slides[currentIndex].caption && (
             <div className="CA-caption" id="CA-caption">
               {slides[currentIndex].caption}
@@ -160,17 +170,23 @@ export default function Competition() {
         ))}
       </div>
 
-
       {/* Competition Details */}
       <header className="CA-competition-details" id="CA-competition-details">
-        <h1 className="CA-heading" id="CA-heading">XVENGERS Dance Competition</h1>
-        <h2 className="CA-judges-heading" id="CA-judges-heading">⚖️ Judges ⚖️</h2>
+        <h1 className="CA-heading" id="CA-heading">
+          XVENGERS Dance Competition
+        </h1>
+        <h2 className="CA-judges-heading" id="CA-judges-heading">
+          ⚖️ Judges ⚖️
+        </h2>
         <p className="CA-judges-info" id="CA-judges-info">
-          <span>Choreography U12, U18, Open:</span> Regent, Sing Sing & Audience Votes (50%)
+          <span>Choreography U12, U18, Open:</span> Regent, Sing Sing & Audience
+          Votes (50%)
           <br />
           <span>K-Pop (Cover):</span> Seliny & Audience Votes (50%)
         </p>
-        <h2 className="CA-remarks-heading" id="CA-remarks-heading">🕺🏽 Remarks For Dancers 💃🏾</h2>
+        <h2 className="CA-remarks-heading" id="CA-remarks-heading">
+          🕺🏽 Remarks For Dancers 💃🏾
+        </h2>
         <p className="CA-remarks-info" id="CA-remarks-info">
           2-10 members per team
           <br />
@@ -180,7 +196,9 @@ export default function Competition() {
           <br />
           Documents for age validation required upon entering finals
         </p>
-        <h2 className="CA-finals-heading" id="CA-finals-heading">🚨 Finals 🚨</h2>
+        <h2 className="CA-finals-heading" id="CA-finals-heading">
+          🚨 Finals 🚨
+        </h2>
         <p className="CA-finals-info" id="CA-finals-info">
           Top 5 of each category enter finals
           <br />
@@ -188,43 +206,63 @@ export default function Competition() {
           <br />
           Ticketing info will be announced soon
         </p>
-        <h2 className="CA-venue-heading" id="CA-venue-heading">📍 Venue & Date</h2>
+        <h2 className="CA-venue-heading" id="CA-venue-heading">
+          📍 Venue & Date
+        </h2>
         <p className="CA-venue-info" id="CA-venue-info">
           <span>📍 Vessel 01, Kwun Tong</span>
           <br />
           <span>🗓 April 4, 2025</span>
         </p>
-        <h2 className="CA-awards-heading" id="CA-awards-heading">🏆 Awards & Prizes 🏆</h2>
+        <h2 className="CA-awards-heading" id="CA-awards-heading">
+          🏆 Awards & Prizes 🏆
+        </h2>
         <table className="CA-awards-table" id="CA-awards-table">
           <thead className="CA-awards-thead" id="CA-awards-thead">
             <tr className="CA-awards-row" id="CA-awards-row">
-              <th className="CA-awards-header" id="CA-awards-header-category">Category</th>
-              <th className="CA-awards-header" id="CA-awards-header-1st">1st Place</th>
-              <th className="CA-awards-header" id="CA-awards-header-2nd">2nd Place</th>
-              <th className="CA-awards-header" id="CA-awards-header-3rd">3rd Place</th>
+              <th className="CA-awards-header" id="CA-awards-header-category">
+                Category
+              </th>
+              <th className="CA-awards-header" id="CA-awards-header-1st">
+                1st Place
+              </th>
+              <th className="CA-awards-header" id="CA-awards-header-2nd">
+                2nd Place
+              </th>
+              <th className="CA-awards-header" id="CA-awards-header-3rd">
+                3rd Place
+              </th>
             </tr>
           </thead>
           <tbody className="CA-awards-tbody" id="CA-awards-tbody">
             <tr className="CA-awards-body-row" id="CA-awards-body-row">
-              <td className="CA-awards-cell" id="CA-awards-cell-U12">U12 (Choreography)</td>
+              <td className="CA-awards-cell" id="CA-awards-cell-U12">
+                U12 (Choreography)
+              </td>
               <td className="CA-awards-cell">Voucher $3000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $800 & Trophy</td>
               <td className="CA-awards-cell">Voucher $500 & Trophy</td>
             </tr>
             <tr className="CA-awards-body-row">
-              <td className="CA-awards-cell" id="CA-awards-cell-U18">U18 (Choreography)</td>
+              <td className="CA-awards-cell" id="CA-awards-cell-U18">
+                U18 (Choreography)
+              </td>
               <td className="CA-awards-cell">Voucher $4000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $1000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $600 & Trophy</td>
             </tr>
             <tr className="CA-awards-body-row">
-              <td className="CA-awards-cell" id="CA-awards-cell-open">Open (Choreography)</td>
+              <td className="CA-awards-cell" id="CA-awards-cell-open">
+                Open (Choreography)
+              </td>
               <td className="CA-awards-cell">Voucher $4000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $1000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $600 & Trophy</td>
             </tr>
             <tr className="CA-awards-body-row">
-              <td className="CA-awards-cell" id="CA-awards-cell-kpop">K-Pop (Cover)</td>
+              <td className="CA-awards-cell" id="CA-awards-cell-kpop">
+                K-Pop (Cover)
+              </td>
               <td className="CA-awards-cell">Voucher $4000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $1000 & Trophy</td>
               <td className="CA-awards-cell">Voucher $600 & Trophy</td>
@@ -285,7 +323,9 @@ export default function Competition() {
                 setFormError("");
                 handleInputChange(e);
               } else {
-                setFormError("Phone number must start with '+852' and contain up to 8 digits.");
+                setFormError(
+                  "Phone number must start with '+852' and contain up to 8 digits."
+                );
               }
             }}
             required
@@ -393,14 +433,19 @@ export default function Competition() {
         <p className="CA-payment-info" id="CA-payment-info">
           Please indicate your crew name in the remark of the transaction.
         </p>
-        <h2 className="CA-payment-heading" id="CA-payment-heading">💎 Registration Fee 💎</h2>
+        <h2 className="CA-payment-heading" id="CA-payment-heading">
+          💎 Registration Fee 💎
+        </h2>
         <p className="CA-payment-details" id="CA-payment-details">
-          $150 per member [U12 (Choreography)]<br />
+          $150 per member [U12 (Choreography)]
+          <br />
           $180 per member [U18 (Choreography) & K-Pop (Cover)]
         </p>
 
         {/* Payment Codes Section */}
-        <h4 className="CA-payment-code-heading" id="CA-payment-code-heading">Payment Code</h4>
+        <h4 className="CA-payment-code-heading" id="CA-payment-code-heading">
+          Payment Code
+        </h4>
         <div className="CA-payment-codes" id="CA-payment-codes">
           <img
             src="/payment-code1.png"
@@ -416,28 +461,31 @@ export default function Competition() {
           />
         </div>
 
-
         {/* Submit Feedback */}
-        {
-          submitStatus && (
-            <p
-              className={`CA-feedback ${submitStatus.includes("successful") ? "CA-success" : "CA-failure"}`}
-              id="CA-feedback"
-            >
-              {submitStatus}
-            </p>
-          )
-        }
+        {submitStatus && (
+          <p
+            className={`CA-feedback ${
+              submitStatus.includes("successful") ? "CA-success" : "CA-failure"
+            }`}
+            id="CA-feedback"
+          >
+            {submitStatus}
+          </p>
+        )}
 
         {/* Buttons */}
         <button className="CA-button" id="CA-button-submit" type="submit">
           Submit
         </button>
-        <button className="CA-button CA-button-reset" id="CA-button-reset" type="button" onClick={handleReset}>
+        <button
+          className="CA-button CA-button-reset"
+          id="CA-button-reset"
+          type="button"
+          onClick={handleReset}
+        >
           Reset
         </button>
-      </form >
-    </div >
+      </form>
+    </div>
   );
-
 }
