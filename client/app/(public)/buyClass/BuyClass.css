@@ -1,0 +1,344 @@
+.BuyClassShow .box-container {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  /* Two columns */
+  grid-template-rows: repeat(3, auto);
+  /* Three rows */
+  gap: 20px;
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+.boxPrice {
+  align-items: center;
+  /* Vertically align items (image and price) */
+  justify-content: space-between;
+  /* Place space between the image and price */
+  padding: 15px;
+  /* Add some inner spacing */
+  box-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+.boxMain h1 {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  /* Adjust font size for better balance */
+}
+
+.AllPriceTag h1,
+.AllPriceTag h2 {
+  padding: 5px 8px;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+.boxPrice h1,
+.SpecialPro h1 {
+  font-size: 2.1rem;
+  /* Adjust font size for better balance */
+}
+
+.boxPrice h2,
+.SpecialPro h2 {
+  font-size: 1.8rem;
+  /* Adjust font size for better balance */
+}
+
+.SpecialPro h1,
+.SpecialPro h2 {
+  text-align: center;
+}
+
+.SpecialPro {
+  color: #fff;
+  background-color: rgb(49, 49, 49);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.SpecialPro span {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 15px;
+}
+
+
+
+.boxMain img {
+  height: auto;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding-top: 0rem;
+  overflow: hidden;
+}
+
+.boxPrice,
+.SpecialPro {
+  position: relative;
+  /* Enable positioning of children */
+}
+
+.boxPrice img,
+.SpecialPro img {
+  position: absolute;
+  /* Position relative to the parent container */
+  bottom: 0;
+  /* Align to the bottom */
+  right: 0;
+  /* Align to the right */
+  height: 40px;
+  /* Set a fixed height */
+  margin: 15px;
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+
+
+.boxPrice:hover,
+.SpecialPro:hover {
+  border-radius: 0.5rem;
+  border: 0.3rem solid orange;
+  /* border-color: aqua; */
+}
+
+.BuyClassShow .box-container .boxMain {
+
+  grid-column: 1 / 2;
+  /* Place boxMain in the first column */
+  grid-row: 1 / 3;
+  /* Span from row 1 to row 4, occupying three rows */
+  box-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding-top: 2rem;
+}
+
+.BuyClassShow .box-container .AllPriceTag {
+  grid-column: 2 / 3;
+  /* Place AllPriceTag in the second column */
+  grid-row: 1 / 2;
+  /* Place it in the top row of the second column */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two columns */
+  grid-template-rows: auto auto;
+  /* Two rows */
+  gap: 20px;
+  /* Add space between grid items */
+  width: 100%;
+}
+
+.BuyClassShow .box-container .AllPriceTag .boxPrice {
+  width: 100%;
+}
+
+.BuyClassShow .box-container .SpecialPro {
+  grid-column: 2 / 3;
+  /* Place PriceTagEx in the second column */
+  grid-row: 2 / 3;
+  /* Place it in the bottom row of the second column */
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.calculate {
+  padding: 30px;
+  position: relative;
+  /* Optional: choose absolute if within a specific parent */
+  width: 80%;
+  /* Ensures it spans the container width */
+  display: flex;
+  /* Enables flexbox layout */
+  flex-direction: column;
+  /* Keeps content stacked vertically */
+  align-items: center;
+  /* Centers content horizontally */
+  justify-content: center;
+  /* Centers content vertically */
+  margin: 0 auto;
+  /* Centers the entire container */
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculations */
+}
+
+hr {
+  height: 2px;
+  margin: 20px auto;
+  background-color: #ccc;
+  border: none;
+  display: block; /* Ensures it obeys the width setting */
+}
+.calculate h1 {
+  font-size: 1.8rem;
+  /* Adjust the size */
+  font-weight: bold;
+  /* Make the heading more prominent */
+  text-align: center;
+  /* Center the heading text */
+  color: #333;
+  /* Change the heading color */
+  margin: 0;
+  /* Add spacing above and below */
+}
+
+.calculate h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* Adjust the size */
+}
+
+
+.calculate table {
+  width: 70%;
+}
+
+.calculate span {
+  font-size: 0.8rem;
+  background-color: orange;
+  /* Adjust the size */
+}
+
+.calculate th,
+.calculate td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  /* Center-align the content within each table cell */
+}
+
+.calculate th {
+  text-align: center;
+}
+
+.calculate hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin: 20px 0;
+  width: 100%;
+  /* Ensure the horizontal rule stretches across the content width */
+}
+
+
+/* css for Button */
+
+/* Container for buttons */
+.bottom-buttons {
+  display: flex;
+  flex-direction: column;
+  /* Stack buttons vertically */
+  gap: 15px;
+  /* Space between buttons */
+  width: 90%;
+  /* Match container width */
+  padding: 20px;
+  align-items: center;
+  /* Centers content horizontally */
+  justify-content: center;
+  /* Centers content vertically */
+  margin: 0 auto;
+  /* Centers the entire container */
+  
+}
+
+/* Shared button styling */
+.bottom-buttons button,
+.bottom-buttons a {
+  width: 90%;
+  /* Full width */
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Specific button styles */
+.AddToCart-btn {
+  font-weight: bold;
+  background-color: orange;
+  color: #fff;
+}
+
+.whatsapp-btn {
+  display: flex;
+  justify-content: center; /* Align content horizontally */
+  align-items: center; /* Align content vertically */
+  gap: 10px; /* Space between elements */
+  text-decoration: none; /* Remove underline from links */
+  background-color: #25D366; /* WhatsApp green background */
+  color: #fff; /* White text color */
+  padding: 10px 15px; /* Optional: Add padding for better spacing */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  font-size: 16px; /* Optional: Adjust text size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-weight: bold;
+}
+
+
+.BookTheClass-btn {
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Hover effects */
+.bottom-buttons button:hover {
+  opacity: 0.9;
+  /* Slight fade on hover */
+}
+
+/* Active style for boxPrice */
+.boxPrice.active {
+  border: 2px solid orange;
+  background-color: #fcefcf;
+  /* Light yellow background for emphasis */
+  transform: scale(1.05);
+  /* Slight zoom for visual feedback */
+  transition: all 0.3s ease;
+}
+
+/* Active style for SpecialPro */
+.SpecialPro.active {
+  border: 2px solid orange;
+  /* Green border for emphasis */
+  background-color: orange;
+  /* Light green background */
+  transform: scale(1.05);
+  /* Slight zoom */
+  transition: all 0.3s ease;
+}
+
+.product-box {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-box.clickable:hover {
+  border-color: orange;
+  transform: scale(1.05);
+}
+
+.product-box.disabled {
+  background-color: #f5f5f5;
+  color: #aaa;
+  cursor: not-allowed;
+}

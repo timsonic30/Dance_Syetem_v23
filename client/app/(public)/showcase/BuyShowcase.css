@@ -1,0 +1,261 @@
+.BuyShowcase .box-container .AllPriceTag .boxPrice {
+  margin-bottom: 20px; /* 在每个产品框上下增加 20px 的间距 */
+}
+
+/* BuyShowcase 容器的通用样式 */
+.BuyShowcase .box-container {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr; /* 定义两列布局 */
+  grid-template-rows: repeat(2, auto); /* 三行布局，每行高度自动调整 */
+  gap: 20px; /* 设置子元素之间的间距 */
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+/* 产品框内购物车图标的样式 */
+.boxPrice {
+  position: relative; /* 为子元素设置相对定位 */
+}
+
+.boxPrice img.CartIcon {
+  position: absolute; /* 设置绝对定位 */
+  bottom: 10px; /* 距离底部 10px */
+  right: 10px; /* 距离右侧 10px */
+  width: auto; /* 设置图标宽度 */
+  height: 40px; /* 设置图标高度 */
+  cursor: pointer; /* 鼠标悬停显示手形 */
+  transition: transform 0.3s ease; /* 添加平滑变换效果 */
+}
+
+.boxPrice img.CartIcon:hover {
+  transform: scale(1.2); /* 鼠标悬停时略微放大 */
+}
+
+/* 产品框内文字样式 */
+.boxPrice h1 {
+  font-size: 2.1rem; /* 主标题字体大小 */
+  text-align: left; /* 文本左对齐 */
+  width: 100%; /* 确保内容宽度占满父容器 */
+  margin: 0; /* 去掉默认外边距 */
+  padding: 5px 0; /* 添加上下间距 */
+}
+
+.boxPrice h2 {
+  font-size: 1.8rem; /* 副标题字体大小 */
+  text-align: left; /* 文本左对齐 */
+  width: 100%; /* 确保内容宽度占满父容器 */
+  margin: 5px 0 0 0; /* 添加顶部间距，去掉默认外边距 */
+  padding: 5px 0; /* 添加上下间距 */
+}
+
+.boxPrice {
+  padding: 10px; /* 缩小内边距，从原来的 15px 减少到 10px */
+  display: flex;
+  flex-direction: column; /* 垂直堆叠内容 */
+  align-items: center; /* 水平居中对齐 */
+  justify-content: space-between; /* 在内容之间添加空间 */
+  box-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* 添加阴影效果，增强视觉层次感 */
+  border-radius: 0.5rem; /* 圆角边框 */
+  border: 0.1rem solid rgba(0, 0, 0, 0.1); /* 边框颜色淡雅 */
+  background-color: #fff; /* 背景颜色为白色 */
+  transition: all 0.3s ease; /* 添加平滑过渡效果 */
+  cursor: pointer; /* 鼠标悬停时显示手形光标 */
+}
+
+/* 产品框的 hover 效果 */
+.boxPrice:hover {
+  border: 0.3rem solid orange; /* 鼠标悬停时的边框高亮 */
+  transform: scale(1.05); /* 略微放大效果 */
+}
+
+/* 激活产品框样式 */
+.boxPrice.active {
+  border: 2px solid orange; /* 橙色边框用于强调 */
+  background-color: #fcefcf; /* 浅黄色背景用于突出显示 */
+  transform: scale(1.05); /* 略微放大 */
+}
+
+.boxMain img{
+  width: 100%;
+  height: auto;
+}
+
+/* 顶部标题样式 */
+.boxMain h1 {
+  font-weight: bold; /* 字体加粗 */
+  text-align: center; /* 居中对齐 */
+  padding: 20px;
+  font-size: 2rem; /* 调整字体大小 */
+}
+
+/* 产品框内文字样式 */
+.boxPrice h1 {
+  font-size: 2.1rem; /* 主标题大小 */
+}
+
+.boxPrice h2 {
+  font-size: 1.8rem; /* 副标题大小 */
+}
+
+.AllPriceTag h1,
+.AllPriceTag h2 {
+  padding: 5px 8px; /* 添加文字的内边距 */
+  font-weight: bold; /* 加粗字体 */
+  text-align: left; /* 向左对齐 */
+}
+
+.AllPriceTag h1{
+  font-size: 1.8rem; /* 副标题大小 */
+}
+
+
+/* 产品图片样式 */
+.boxPrice img {
+  position: relative; /* 保持相对定位 */
+  bottom: 0; /* 贴近底部 */
+  right: 0; /* 靠右对齐 */
+  height: 40px; /* 固定高度 */
+  margin: 15px; /* 添加边距 */
+  width: auto; /* 保持宽高比 */
+}
+
+/* 网格布局设置 */
+.BuyShowcase .box-container .boxMain {
+  grid-column: 1 / 2; /* boxMain 占据第一列 */
+  grid-row: 1 / 2; /* 从第 1 行延伸到第 3 行 */
+  box-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border-radius: 0.5rem; /* 圆角边框 */
+  border: 0.1rem solid rgba(0, 0, 0, 0.1); /* 边框颜色淡雅 */
+  padding-top: 2rem; /* 增加顶部间距 */
+}
+
+.BuyShowcase .box-container .AllPriceTag {
+  gap: 30px; /* 产品框之间的间距 */
+  width: 100%; /* 宽度 100% */
+}
+
+.BuyShowcase .box-container .AllPriceTag .boxPrice {
+  width: 100%; /* 产品框宽度占满父容器 */
+}
+
+/* 产品框的禁用样式 */
+.boxPrice.disabled {
+  background-color: rgb(211, 211, 211); /* 设置灰色背景 */
+  opacity: 0.5; /* 调整透明度为 50% */
+  cursor: not-allowed; /* 鼠标光标显示为禁用状态 */
+  border: 0.1rem solid #999; /* 添加更浅的边框 */
+}
+
+/* 禁用状态下的 hover 效果移除 */
+.boxPrice.disabled:hover {
+  transform: none; /* 移除缩放效果 */
+  border: 0.1rem solid #999; /* 禁用 hover 的边框高亮 */
+}
+
+/* 计算区域样式 */
+.calculate {
+  padding: 30px; /* 添加内边距 */
+  position: relative; /* 使用相对定位 */
+  width: 80%; /* 宽度占父容器的 80% */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平居中对齐 */
+  justify-content: center; /* 垂直居中对齐 */
+  margin: 0 auto; /* 居中整个区域 */
+  box-sizing: border-box; /* 将边距和边框包括在宽度计算中 */
+}
+
+.calculate hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin: 20px 0;
+  width: 100%; /* 横线宽度占满容器 */
+}
+
+.calculate h1 {
+  font-size: 1.8rem; /* 调整标题字体大小 */
+  font-weight: bold; /* 加粗字体 */
+  text-align: center; /* 居中对齐 */
+  color: #333; /* 设置颜色为深灰色 */
+  margin: 0; /* 去除外边距 */
+}
+
+.calculate h3 {
+  font-weight: bold; /* 加粗字体 */
+  font-size: 1.5rem; /* 调整字体大小 */
+}
+
+.calculate table {
+  width: 70%; /* 表格宽度占容器的 70% */
+}
+
+.calculate th,
+.calculate td {
+  border-bottom: 1px solid #ddd; /* 表格行底部分割线 */
+  padding: 10px; /* 添加表格内边距 */
+  text-align: left; /* 文本向左对齐 */
+}
+
+.calculate th {
+  text-align: center; /* 表头居中对齐 */
+}
+
+/* 按钮容器样式 */
+.bottom-buttons {
+  display: flex;
+  flex-direction: column; /* 垂直堆叠按钮 */
+  gap: 15px; /* 按钮之间的间距 */
+  width: 90%; /* 按钮容器宽度为 90% */
+  padding: 20px;
+  align-items: center; /* 水平居中对齐 */
+  justify-content: center; /* 垂直居中对齐 */
+  margin: 0 auto; /* 中心位置 */
+}
+
+/* 通用按钮样式 */
+.bottom-buttons button,
+.bottom-buttons a {
+  width: 90%; /* 宽度为 90% */
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 0.5rem; /* 圆角边框 */
+  border: none; /* 去除默认边框 */
+  cursor: pointer; /* 鼠标指针显示为手形 */
+  text-align: center; /* 文本居中对齐 */
+  transition: background-color 0.3s ease; /* 背景颜色平滑过渡 */
+}
+
+/* “添加到购物车” 按钮样式 */
+.AddToCart-btn {
+  font-weight: bold; /* 加粗文本 */
+  background-color: orange; /* 设置背景颜色为橙色 */
+  color: #fff; /* 文本颜色为白色 */
+}
+
+.whatsapp-btn {
+  display: flex;
+  justify-content: center; /* 水平居中内容 */
+  align-items: center; /* 垂直居中内容 */
+  gap: 10px; /* 按钮内元素之间的间距 */
+  text-decoration: none; /* 去掉超链接下划线 */
+  background-color: #25D366; /* WhatsApp 绿色背景 */
+  color: #fff; /* 按钮文本为白色 */
+  padding: 10px 15px; /* 添加内部间距 */
+  border-radius: 5px; /* 圆角边框 */
+  font-size: 16px; /* 文本大小 */
+  cursor: pointer; /* 鼠标指针为手形 */
+  font-weight: bold; /* 加粗字体 */
+}
+
+.BookTheClass-btn {
+  font-weight: bold; /* 加粗文本 */
+  background-color: #000; /* 设置背景颜色为黑色 */
+  color: #fff; /* 文本颜色为白色 */
+}
+
+/* 按钮 hover 效果 */
+.bottom-buttons button:hover {
+  opacity: 0.9; /* 鼠标悬停时略微透明 */
+}

@@ -1,0 +1,302 @@
+/* General Section Styling */
+#MSC-memberScoreChange {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Slideshow Container */
+#MSC-slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#MSC-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#MSC-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+#MSC-prev,
+#MSC-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+#MSC-prev:hover,
+#MSC-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#MSC-prev {
+  left: 10px;
+}
+
+#MSC-next {
+  right: 10px;
+}
+
+/* Dots (Indicators) */
+#MSC-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.MSC-dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.MSC-dot.MSC-active {
+  background-color: #717171;
+}
+
+.MSC-dot:hover {
+  background-color: #333;
+}
+
+
+/* General Section Styling */
+#MSC-memberScoreChange {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* 父级容器：产品网格 */
+.AllmemberScoreChangeP {
+  padding-top: 15px;
+  display: grid;
+  /* 启用 CSS 网格布局 */
+  grid-template-columns: repeat(3, 1fr);
+  /* 定义三列，每列宽度相等（占1份比例） */
+  gap: 20px;
+  /* 设置网格项之间的间距，无论水平还是垂直 */
+  justify-items: center;
+  /* 每个网格项水平居中 */
+  width: 100%;
+  /* 网格容器宽度占满父级宽度 */
+  margin: auto;
+  /* 让整个容器居中 */
+  max-width: 1000px;
+  /* 设置最大宽度以避免过宽 */
+}
+
+/* 单个产品框样式 */
+.MSC-boxPrice {
+  box-sizing: border-box;
+  /* 让边框和内边距计算在宽度范围内 */
+  width: 100%;
+  /* 产品框宽度根据网格列自动调整 */
+  max-width: 300px;
+  /* 限制产品框的最大宽度，避免过大 */
+  border: 1px solid #ddd;
+  /* 添加边框，颜色为浅灰 */
+  border-radius: 10px;
+  /* 添加圆角效果，使框的边角平滑 */
+  padding: 15px;
+  /* 设置内容与边框的内边距 */
+  text-align: center;
+  /* 文字内容居中对齐 */
+  background-color: #fff;
+  /* 背景颜色为白色 */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* 设置动画过渡效果，提升用户交互体验 */
+  cursor: pointer;
+  /* 鼠标悬停时，显示为手型指针 */
+}
+
+.MSC-boxPrice:hover {
+  transform: translateY(-5px);
+  /* 鼠标悬停时，上移效果（提升产品框） */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* 添加阴影效果，突出当前框 */
+}
+
+.MSC-boxPrice.active {
+  border: 3px solid orange;
+  /* 设置激活状态时的高亮边框颜色为橙色 */
+}
+
+/* 产品图片样式 */
+.MSC-productImg {
+  height: auto;
+  /* 高度随宽度比例缩放 */
+  max-width: 100%;
+  /* 图片最大宽度占满产品框 */
+  margin-bottom: 10px;
+  /* 图片与下方文字之间的间距 */
+  border-radius: 5px;
+  /* 图片边角设置为圆角 */
+}
+
+/* 产品标题样式 */
+.MSC-boxPrice h1 {
+  font-size: 1.2rem;
+  /* 设置标题字体大小 */
+  margin-bottom: 10px;
+  /* 标题与下方内容的间距 */
+  color: #000;
+  /* 标题文字颜色为黑色 */
+}
+
+/* 产品积分标题样式 */
+.MSC-boxPrice h2 {
+  font-size: 1.5rem;
+  /* 设置副标题字体大小 */
+  margin-bottom: 10px;
+  /* 副标题与下方内容的间距 */
+}
+
+/* 产品描述文字样式 */
+.MSC-boxPrice p {
+  font-size: 0.9rem;
+  /* 描述文字字体大小 */
+  color: #555;
+  /* 描述文字颜色为浅灰 */
+}
+
+/* MSC-CartIcon Styling */
+.MSC-CartIcon {
+  margin-left: 220px;
+  left: 10px;
+  /* Place it 10px from the right */
+  width: 40px;
+  /* Set the icon's width */
+  height: auto;
+  /* Set the icon's height */
+  cursor: pointer;
+  /* Show a pointer when hovering over the icon */
+  transition: transform 0.3s;
+  /* Optional: Add a hover effect */
+}
+
+/* Disabled Product Box */
+.MSC-boxPrice.disabled {
+  pointer-events: none; /* Disable click events */
+  opacity: 0.5; /* Make the box appear faded */
+  background-color: #f5f5f5; /* Gray background to indicate unavailability */
+  cursor: not-allowed; /* Change cursor to indicate no interaction */
+}
+
+.MSC-boxPrice.disabled img {
+  filter: grayscale(100%); /* Make the product image grayscale */
+}
+
+.MSC-boxPrice.disabled:hover {
+  transform: none; /* Disable hover effects */
+  box-shadow: none; /* Remove hover shadow */
+}
+
+/* Active Product Box (if applicable) */
+.MSC-boxPrice.active {
+  border: 3px solid orange; /* Highlight active product */
+  background-color: #fff; /* Ensure background color remains bright */
+  transform: scale(1.05); /* Slight zoom for visual feedback */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+
+/* Bottom Buttons Section */
+.MSC-bottom-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Space between buttons */
+  width: 90%; /* Match container width */
+  padding: 20px; /* Add spacing inside the container */
+  align-items: center; /* Horizontally center buttons */
+  justify-content: center; /* Vertically center buttons */
+  margin: 0 auto; /* Center the entire container */
+}
+
+/* Shared button styling */
+.MSC-bottom-buttons button,
+.MSC-bottom-buttons a {
+  width: 90%; /* Buttons take up most of the container width */
+  padding: 15px; /* Add spacing inside the button */
+  font-size: 1.2rem; /* Increase font size for better readability */
+  border-radius: 0.5rem; /* Add rounded corners */
+  border: none; /* Remove default button borders */
+  cursor: pointer; /* Display pointer on hover */
+  text-align: center; /* Center text inside buttons */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add To Cart Button */
+.MSC-AddToCart-btn {
+  font-weight: bold; /* Make text bold */
+  background-color: orange; /* Use orange background */
+  color: #fff; /* White text */
+}
+
+.MSC-AddToCart-btn:hover {
+  opacity: 0.9; /* Slight fade effect on hover */
+}
+
+/* WhatsApp Button */
+.MSC-whatsapp-btn {
+  display: flex; /* Flexbox for aligning content inside the button */
+  justify-content: center; /* Center text and icons horizontally */
+  align-items: center; /* Center text and icons vertically */
+  gap: 10px; /* Space between icon and text */
+  text-decoration: none; /* Remove link underline */
+  background-color: #25D366; /* WhatsApp green background */
+  color: #fff; /* White text */
+  font-size: 1.2rem; /* Adjust text size */
+  font-weight: bold; /* Make text bold */
+}
+
+.MSC-whatsapp-btn:hover {
+  background-color: #1da851; /* Slightly darker green on hover */
+}
+
+/* Book the Class Button */
+.BookTheClass-btn {
+  font-weight: bold; /* Make text bold */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+.BookTheClass-btn:hover {
+  opacity: 0.9; /* Slight fade effect on hover */
+}

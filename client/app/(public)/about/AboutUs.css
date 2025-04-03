@@ -1,0 +1,165 @@
+/* Container */
+#AboutU-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Language Selector Buttons */
+#AboutU-language-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#AboutU-language-buttons span {
+  display: block;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+#AboutU-language-buttons button {
+  display: inline-block; /* Ensure buttons are on the same line */
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 180px;
+  margin: 0 5px; /* Space between buttons */
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#AboutU-language-buttons button.active {
+  color: white;
+  background-color: orange;
+}
+
+#AboutU-language-buttons button:hover {
+  color: #000;
+  background-color: #8585858c;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+  border-color: transparent;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; /* This will crop the image to fill the container */
+  border-radius: 10px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px; /* Set width for the circle */
+  height: 40px; /* Set height for the circle */
+  border-radius: 50%; /* Makes the button circular */
+  font-size: 18px;
+  display: flex; /* Centers the content inside */
+  align-items: center; /* Aligns icon vertically */
+  justify-content: center; /* Aligns icon horizontally */
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots (Indicators) */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.dot:hover {
+  background-color: #333;
+}
+
+/* Headings */
+#AboutU-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+}
+
+#AboutU-subheading {
+  padding-left: 30px;
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  color: #444;
+}
+
+#AboutU-smallheading {
+  padding-left: 30px;
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+  color: #555;
+}
+
+/* Paragraphs */
+#AboutU-paragraph {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 10px 0;
+  text-align: justify;
+  color: #666;
+}
