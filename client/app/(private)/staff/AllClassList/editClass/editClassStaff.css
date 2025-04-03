@@ -1,0 +1,122 @@
+/* Main Container */
+#EditClassStaff-container {
+    width: 60%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+#EditClassStaff-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#EditClassStaff-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#EditClassStaff-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Form Section */
+#EditClassStaff-form-section {
+    padding: 10px;
+}
+
+/* Input Containers */
+.EditClassStaff-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.EditClassStaff-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.EditClassStaff-input,
+.EditClassStaff-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.EditClassStaff-input:focus,
+.EditClassStaff-select:focus {
+    border-color: #ffa500;
+    outline: none;
+}
+
+/* Submit Container */
+#EditClassStaff-submit-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.EditClassStaff-button {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.EditClassStaff-button:hover {
+    opacity: 0.9;
+}
+
+.EditClassStaff-button.cancel {
+    background-color: #ccc;
+    color: #333;
+}
+
+.EditClassStaff-button.cancel:hover {
+    background-color: #bbb;
+}
+
+.EditClassStaff-button {
+    background-color: #ffa500;
+    color: white;
+}
+
+.EditClassStaff-button:hover {
+    background-color: #ff8800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #EditClassStaff-container {
+        width: 90%;
+    }
+
+    .EditClassStaff-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #EditClassStaff-submit-container {
+        flex-direction: column;
+    }
+}

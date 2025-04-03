@@ -1,0 +1,135 @@
+/* Main Container */
+.memberList-container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 16px;
+    background: #ffffff; /* White background for clarity */
+    font-family: sans-serif;
+  }
+
+  /* Search Bar Container */
+.memberList-input {
+    display: flex; /* Align the input and icon horizontally */
+    align-items: center;
+    gap: 10px; /* Space between the input field and the icon */
+    margin-top: 12px;
+    width: 100%;
+    border: 1px solid #b1b0b0; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    padding: 8px;
+  }
+  
+  /* Input Field */
+  .memberList-grow {
+    flex-grow: 1; /* Make the input take up as much space as possible */
+    border: none; /* Remove default input border */
+    font-size: 14px;
+    padding: 6px;
+    outline: none; /* Remove focus outline */
+    background: transparent; /* Match the input background with container */
+    color: #502c2c; /* Dark gray text */
+  }
+  
+  /* Placeholder Text Style */
+  .memberList-grow::placeholder {
+    color: #b1b0b0; /* Light gray placeholder text */
+    font-size: 14px;
+  }
+  
+  /* SVG Icon Style */
+  .memberList-icon {
+    width: 20px;
+    height: 20px;
+    color: #464646; /* Dark gray icon color */
+  }
+  
+  /* Search Bar on Focus */
+  .memberList-input:focus-within {
+    border-color: #ffa500; /* Blue border on focus */
+    background-color: #ffffff; /* White background */
+  }
+  
+  
+  /* Heading */
+  .memberList-title {
+    text-align: left;
+    font-size: 22px;
+    color: #464646; /* Dark gray for heading text */
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  /* Loading and Error Messages */
+  .memberList-loading-message,
+  .memberList-error-message {
+    text-align: center;
+    font-size: 16px;
+    color: #f39c12; /* Highlight color for messages */
+    margin-top: 10px;
+  }
+  
+  /* Table Styling */
+  .memberList-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff; /* White table background */
+  }
+  
+  .memberList-table thead th {
+    border-top: 2px solid #ffa500; /* Adds a solid orange border */
+    text-align: left;
+    padding: 12px;
+    color: #b1b0b0; /* Dark gray text in headers */
+    font-size: 14px;
+  }
+  
+  .memberList-table tbody td {
+    padding: 12px;
+    color: #502c2c; /* Dark gray text */
+  }
+  
+  /* Apply specific styles for odd rows */
+  .memberList-table tbody tr:nth-child(odd) {
+    background-color: #f3f3f3; /* Light gray for odd rows */
+  }
+  
+  /* Apply specific styles for even rows */
+  .memberList-table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Dark gray for even rows */
+  }
+  
+  /* Hover effect for rows */
+  .memberList-table tbody tr:hover {
+    background-color: #ffeabe; /* #ffa500 Slightly darker gray for hover */
+  }
+  
+  /* Links */
+  .memberList-table tbody td a {
+    color: #3498db; /* Blue links */
+    text-decoration: none;
+  }
+  
+  .memberList-table tbody td a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .memberList-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .memberList-table th,
+    .memberList-table td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .memberList-title {
+      font-size: 18px;
+    }
+  }
+  

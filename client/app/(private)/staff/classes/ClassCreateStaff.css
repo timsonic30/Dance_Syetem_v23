@@ -1,0 +1,127 @@
+/* General Container Styling */
+#ClassCreateStaff-container {
+    max-width: 1000px;
+    width: 700px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Header Styling */
+  #ClassCreateStaff-header {
+    /* background: linear-gradient(to right, #000000, #4d4d4d); */
+    background: linear-gradient(to right, #000000, #4d4d4d);
+    padding: 1.5rem;
+    color: #ffffff;
+  }
+  
+  #ClassCreateStaff-header-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  #ClassCreateStaff-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  
+  #ClassCreateStaff-description {
+    margin-top: 0.5rem;
+    color: #ffffff;
+  }
+  
+  /* Icon Styling */
+  .ClassCreateStaff-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  .ClassCreateStaff-icon-small {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+    color: #ffa500;
+  }
+  
+  /* Form Section Styling */
+  #ClassCreateStaff-form-section {
+    padding: 1.5rem;
+  }
+  
+  #ClassCreateStaff-form-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #ClassCreateStaff-info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  #ClassCreateStaff-info-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  #ClassCreateStaff-required-label {
+    font-size: 0.75rem;
+    color: #ff4500;
+    margin-left: 0.5rem;
+  }
+  
+  /* Input Styling */
+  .ClassCreateStaff-input-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  
+  .ClassCreateStaff-label {
+    color: #7d7d7d;
+    width: 6rem;
+    margin-right: 1.5rem;
+  }
+  
+  .ClassCreateStaff-input,
+  .ClassCreateStaff-select {
+    padding: 0.5rem;
+    border: 2px solid #d1d1d1;
+    border-radius: 0.25rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .ClassCreateStaff-input:focus,
+  .ClassCreateStaff-select:focus {
+    outline: none;
+    border-color: #ffa500;
+  }
+  
+  /* Submit Button Styling */
+  #ClassCreateStaff-submit-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  
+  .ClassCreateStaff-button {
+    background-color: #333333;
+    color: #ffffff;
+    width: 700px;
+    border: none;
+    padding: 0.75rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .ClassCreateStaff-button:hover {
+    background-color: #ffa500;
+  }
+  

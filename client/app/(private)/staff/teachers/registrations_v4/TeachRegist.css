@@ -1,0 +1,134 @@
+/* General Container Styling */
+#TeachRegist-container {
+    max-width: 1000px;
+    width: 700px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Loading Screen Styling */
+  #TeachRegist-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Header Section */
+  #TeachRegist-header {
+    background: linear-gradient(to right, #000000, #4d4d4d);
+    padding: 1.5rem;
+    color: #ffffff;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  #TeachRegist-header-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  #TeachRegist-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  
+  #TeachRegist-description {
+    margin-top: 0.5rem;
+    color: #ffffff;
+  }
+  
+  /* Icon Styling */
+  #TeachRegist-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  /* Form Styling */
+  #TeachRegist-form {
+    padding: 1.5rem;
+  }
+  
+  #TeachRegist-form > div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  /* Section Headers */
+  #TeachRegist-personal-header,
+  #TeachRegist-additional-header,
+  #TeachRegist-password-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  #TeachRegist-personal-title,
+  #TeachRegist-additional-title,
+  #TeachRegist-password-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  #TeachRegist-required {
+    font-size: 0.75rem;
+    color: #ff4500;
+    margin-left: 0.5rem;
+  }
+  
+  /* Input Container */
+  .TeachRegist-input-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  
+  .TeachRegist-label {
+    color: #7d7d7d;
+    width: 6rem;
+    margin-right: 1.5rem;
+  }
+  
+  .TeachRegist-input,
+  .TeachRegist-select {
+    padding: 0.5rem;
+    border: 2px solid #d1d1d1;
+    border-radius: 0.25rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .TeachRegist-input:focus,
+  .TeachRegist-select:focus {
+    outline: none;
+    border-color: #ffa500;
+  }
+  
+  /* Submit Button */
+  #TeachRegist-submit {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  
+  #TeachRegist-submit-button {
+    background-color: #333333;
+    width: 700px;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #TeachRegist-submit-button:hover {
+    background-color: #ffa500;
+  }
+  

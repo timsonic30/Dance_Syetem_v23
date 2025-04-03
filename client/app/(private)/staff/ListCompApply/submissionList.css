@@ -1,0 +1,167 @@
+/* Main Container */
+.LCA-submission-list-container {
+  width: 80%;
+  margin: 30px auto;
+  padding: 16px;
+  background: #ffffff; /* White background for clarity */
+  font-family: sans-serif;
+}
+
+/* Heading */
+.LCA-submission-list-title {
+  text-align: left; /* Corrected capitalization */
+  font-size: 22px;
+  color: #464646; /* Dark gray for heading text */
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Loading and Error Messages */
+.LCA-loading-message,
+.LCA-error-message {
+  text-align: center;
+  font-size: 16px;
+  color: #f39c12; /* Highlight color for messages */
+  margin-top: 10px;
+}
+
+/* Table Styling */
+.LCA-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff; /* White table background */
+}
+
+.LCA-table thead th {
+  border-top: 2px solid #ffa500; /* Adds a solid orange border */
+  text-align: left;
+  padding: 12px;
+  color: #b1b0b0; /* Dark gray text in headers */
+  font-size: 14px;
+}
+
+.LCA-table tbody td {
+  padding: 12px;
+  color: #502c2c; /* Dark gray text */
+}
+
+/* Apply specific styles for odd rows */
+.LCA-table tbody tr:nth-child(odd) {
+  background-color: #f3f3f3; /* Light gray for odd rows */
+}
+
+/* Apply specific styles for even rows */
+.LCA-table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Dark gray for even rows */
+}
+
+/* Hover effect for rows */
+.LCA-table tbody tr:hover {
+  background-color: #ffeabe; /* #ffa500 Slightly darker gray for hover */
+}
+
+/* Links */
+.LCA-table tbody td a {
+  color: #3498db; /* Blue links */
+  text-decoration: none;
+}
+
+.LCA-table tbody td a:hover {
+  text-decoration: underline;
+}
+
+.LCA-transaction-image {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer; /* Indicate that the image is clickable */
+}
+
+.LCA-table-link {
+  text-decoration: none; /* Remove default link underline */
+}
+
+/* General styling for text input fields */
+.LCA-crewName,
+.LCA-contactName,
+.LCA-contactNumber,
+.LCA-instagram,
+.LCA-category,
+.LCA-teamMembers {
+  max-width: 150px; /* Limit the width of the input fields */
+  width: 100%; /* Responsive width */
+  padding: 8px; /* Add padding for better user experience */
+  margin: 5px 0; /* Space between fields */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Standard font size for readability */
+  box-sizing: border-box; /* Includes padding and border in width */
+}
+
+/* Focus effect for all text input fields */
+.LCA-crewName:focus,
+.LCA-contactName:focus,
+.LCA-contactNumber:focus,
+.LCA-instagram:focus,
+.LCA-category:focus,
+.LCA-teamMembers:focus {
+  outline: none; /* Remove default browser outline */
+  border-color: orange; /* Change border color to blue */
+  box-shadow: 0 0 5px rgba(255, 183, 0, 0.5); /* Add glowing blue effect */
+}
+
+/* Styling for file input field */
+.LCA-transactionSlip {
+  max-width: 150px; /* Limit the width */
+  width: 100%;
+  padding: 8px; /* Add padding for uniform styling */
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Focus effect for file input field */
+.LCA-transactionSlip:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 5px rgba(255, 170, 0, 0.5);
+}
+
+/* Styling for error messages */
+.LCA-error-message {
+  color: #ff4d4d; /* Red color for error text */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Styling for success messages */
+.LCA-success-message {
+  color: #28a745; /* Green color for success text */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .LCA-submission-list-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .LCA-table th,
+  .LCA-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .LCA-submission-list-title {
+    font-size: 18px;
+  }
+}

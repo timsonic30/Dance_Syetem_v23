@@ -1,0 +1,131 @@
+/* Main Container */
+.TeachList-container {
+  width: 80%;
+  margin: 30px auto;
+  padding: 16px;
+  background: #ffffff; /* White background for clarity */
+  font-family: sans-serif;
+}
+
+/* Search Bar */
+.TeachList-input {
+  display: flex; /* Align input field and icon horizontally */
+  align-items: center;
+  gap: 10px; /* Space between input field and icon */
+  margin-top: 12px;
+  width: 100%;
+  border: 1px solid #b1b0b0; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  padding: 8px;
+}
+
+/* Input Field */
+.TeachList-inputField {
+  flex-grow: 1; /* Expand input field to occupy available space */
+  border: none; /* Remove default input border */
+  font-size: 14px;
+  padding: 6px;
+  outline: none; /* Remove default focus outline */
+  background: transparent; /* Transparent to match container */
+  color: #502c2c; /* Dark gray text */
+}
+
+/* Placeholder Text Style */
+.TeachList-inputField::placeholder {
+  color: #b1b0b0; /* Light gray placeholder text */
+  font-size: 14px;
+}
+
+/* SVG Icon Style */
+.TeachList-icon {
+  width: 20px;
+  height: 20px;
+  color: #464646; /* Dark gray icon color */
+}
+
+/* Search Bar on Focus */
+.TeachList-input:focus-within {
+  border-color: #ffa500; /* Highlight border color */
+  background-color: #ffffff; /* White background */
+}
+
+/* Divider */
+.TeachList-dividerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.TeachList-divider {
+  height: 1px;
+  background-color: #b1b0b0; /* Light gray divider */
+  margin: 8px 0;
+}
+
+/* Table */
+.TeachList-tableContainer {
+  overflow-x: auto; /* Enable horizontal scrolling for the table */
+}
+
+.TeachList-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff; /* White table background */
+}
+
+.TeachList-tableHeader th {
+  border-top: 2px solid #ffa500; /* Highlight border */
+  text-align: left;
+  padding: 12px;
+  color: #b1b0b0; /* Light gray text */
+  font-size: 14px;
+}
+
+.TeachList-tableBody td {
+  padding: 12px;
+  color: #502c2c; /* Dark gray text */
+}
+
+/* Alternating Row Colors */
+.TeachList-tableBody tr:nth-child(odd) {
+  background-color: #f3f3f3; /* Light gray for odd rows */
+}
+
+.TeachList-tableBody tr:nth-child(even) {
+  background-color: #ffffff; /* White for even rows */
+}
+
+/* Hover Effect */
+.TeachList-tableBody tr:hover {
+  background-color: #ffeabe; /* Slightly darker hover */
+}
+
+/* Table Cell */
+.TeachList-cell a {
+  color: #3498db; /* Blue links */
+  text-decoration: none;
+}
+
+.TeachList-cell a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .TeachList-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .TeachList-tableHeader th,
+  .TeachList-tableBody td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .TeachList-title {
+    font-size: 18px;
+  }
+}
